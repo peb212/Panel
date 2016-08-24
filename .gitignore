@@ -1,6 +1,5 @@
 # Cache objects
 lib/
-test/
 testdata/
 publish/
 node_modules/
@@ -12,7 +11,6 @@ scss/
 bower_components/
 build/
 scss/
-test/
 css/
 bower.json
 Gruntfile.js

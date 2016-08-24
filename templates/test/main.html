@@ -1,0 +1,67 @@
+<div id="wrapper">
+	<header class="clearfix">
+		<!-- Start Logo & Navigation -->
+		<nav class="navbar navbar-default login-navbar">
+			<div class="container">
+				<div class="row">
+					测试
+				</div>
+			</div>
+		</nav>
+		<!-- End Logo & Navigation -->
+	</header>
+	<main class="main login">
+		
+		<div class="loginbox">
+			<ul>
+				<li class="email-input-wrap">
+					<!-- <label>
+						<img src="../../images/email.png">
+					</label> -->
+					<input type="text" class="form-control" name="username" placeholder="邮箱或手机登录" data-reg="/(.+@.+\.[a-zA-Z]{2,4}$)|(\d{11})/" data-toggle="popover" data-trigger="manual" data-content="请输入正确的邮箱或手机" />
+				</li>
+				<li class="password-input-wrap">
+					<!-- <label>
+						<img src="../../images/shield.png">
+					</label> -->
+					<input type="password" class="form-control" name="password" placeholder="密码" data-reg="/[^\n]{1,}/g"  data-toggle="popover" data-trigger="manual" data-content="密码不能为空"/>
+				</li>
+				<li><a href="javascript:void(0)" name="viwerforgetbox">注册？</a></li>
+				<li><button type="button" class="btn btn-default" name="login"  data-toggle="popover" data-trigger="manual" data-content="登录失败：用户名或密码错误">登录</button></li>
+			</ul>
+			
+			<ul class="forgetbox">				
+				<li><p>输入你注册的电子邮件地址，<br />和我们会发邮件给你一个重置的密码。</p></li>
+				<li><input type="text" class="form-control" name="email" placeholder="注册的电子邮件地址" data-reg="/.+@.+\.[a-zA-Z]{2,4}$/"  data-toggle="popover" data-trigger="manual" data-content="请输入正确的邮箱"/></li>
+				<li><button type="button" class="btn btn-default" name="reset" data-toggle="popover" data-trigger="manual" data-content="邮件提交成功">提交</button></li>
+			</ul>
+		</div>
+	</main>
+	<!-- Start footer -->
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<!-- <div class="footer-brand">
+					<span>见智</span>
+					<span>wision</span>
+				</div>
+				<div class="footer-copyright">
+					<a href="javascript:void(0)">沪ICP备案XXXXX号</a>
+				</div> -->
+				<!-- <p class="footer-explain">
+					<span>&copy;2016见智Wision</span>
+					<span class="bar">|</span>
+					<span>使用规则</span>
+					<span class="bar">|</span>
+					<span>联系我们</span>
+					<span class="bar">|</span>
+					<span>来见智工作</span>
+					<span class="bar">|</span>
+					<span>意见反馈</span>
+				</p>	 -->	
+			</div>
+		</div>
+		
+	</footer>
+	<!-- / End footer -->
+</div>
