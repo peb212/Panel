@@ -1,0 +1,20 @@
+# Cache objects
+lib/
+test/
+testdata/
+publish/
+node_modules/
+bower_components/
+uglifycopy/
+scss/
+.idea/
+~/
+bower_components/
+build/
+scss/
+test/
+css/
+bower.json
+Gruntfile.js
+package.json
+webpack.config.js

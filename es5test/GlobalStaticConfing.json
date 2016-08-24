@@ -1,0 +1,13 @@
+{
+  "pagecharset" : "utf-8",
+	"BaseURL" : "./",
+	"testURL" : "./",
+	"FrontURL" : "./../",
+	"isDebug" : true,
+	"serviceParam":{
+		"100001":"api/files"
+	},
+	"testdataURL":"./testdata/",
+	"testdata" : {
+	}
+}
