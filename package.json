@@ -1,8 +1,8 @@
 {
   "name": "panel",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "panel",
+  "main": "es6/Enter.jsx",
   "directories": {
     "test": "test"
   },
