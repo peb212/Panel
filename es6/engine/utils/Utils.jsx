@@ -66,8 +66,9 @@ class URL
 			hparam.data = {};
 		if(window.history&&window.history.pushState)
 		{
-			if(url.origin)
-				window.history.pushState(hparam,title?title:null,url.origin+url.pathname+"?"+$.param(hparam));
+			// console.log(hparam,title?title:null,url.origin+url.pathname+"?"+$.param(hparam),"=====================================",hparam)
+			// if(url.origin)
+			// 	history.pushState(hparam,title?title:null,url.origin+url.pathname+"?"+$.param(hparam));
 		}
 		else
 		{

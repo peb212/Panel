@@ -1,0 +1,28 @@
+{
+  "name": "panel",
+  "description": "",
+  "main": "index.html",
+  "authors": [
+    "zhengqp (strongiron@qq.com)"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "~1.9.0",
+    "requirejs": "~2.2.0",
+    "seajs": "~3.0.0",
+    "commonjs": "~0.2.0",
+    "js-cookie": "js-cookie/js-cookie#~2.1.2",
+    "browserjs": "operasoftware/browserjs"
+  },
+  "homepage": "https://github.com/gruntjs/grunt-init-gruntfile-sample",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

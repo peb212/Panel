@@ -5,6 +5,7 @@
  * @version 0.0.1
  */
 import URLUtils from './../../utils/Utils';
+// import Test_Module from "./../../../modules/test/Test_Module";
 // import RequireFactory from './../../utils/RequireFactory';
 const MOTHOD = {
 	GET  : "GET",
@@ -266,7 +267,7 @@ class MessageFactory
 
 	getParamer(key)
 	{
-		return GlobalStaticConfig.serviceParam&&GlobalStaticConfig.serviceParam[key]&&"";
+		return GlobalStaticConfig.serviceParam?GlobalStaticConfig.serviceParam[key]:"";
 	}
 	
 	/**
@@ -313,7 +314,9 @@ class loadModule
 
 			for(var i=0,len=modKeys.length;i<len;i++)
 			{
-				var mod = modKeys[i];
+				var path = require("path")
+				console.log(modKeys[i]);
+				var mod = modKeys[i];//require(path.relative('/engine/service/Message',modKeys[i]));
 				// console.log(mod,mod.subHander,mod.hasOwnProperty("subHander"),mod.hasOwnProperty("checkCode"),$.type(mod.subHander)=="function");
 				if(mod)
 				{

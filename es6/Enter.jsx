@@ -9,6 +9,7 @@ import "./global/Global";
 import Message        from "./engine/controls/service/Message";
 import ModuleConst     from "./consts/ModuleConst";
 import URLUtils        from "./engine/utils/Utils";
+import Test_InternalOrder        from "./modules/test/orders/Test_InternalOrder";
 console.log("enter");
 if(!URLUtils.tryToModules())
-	Message.sendToModules("open_test_mainpanel",[ModuleConst.TEST_MODULE],{},1);
+	Message.sendToModules(Test_InternalOrder.OPEN,[ModuleConst.TEST_MODULE],{},1);

@@ -20,14 +20,14 @@ import Test_registerPanel from "./../views/Test_registerPanel";
  * @param    {Object}                   message [description]
  * @return   {[type]}                           [description]
  */
-let Test_Proxy = (message={}) =>
+let Test_Proxy = (message) =>
 {
-	console.log(message);
-	var action = message["actionkey"];
-	console.log(action);
+	console.log("fdsfdsfsdf");
+	var action = message&&message["actionkey"]||"";
+	console.log("==========================",action);
 	switch (action)
 	{
-		case Test_InternalOrder.OPEN_PANEL:
+		case Test_InternalOrder.OPEN:
 			tryOpenMainPanel(message.data);
 		break;
 		case Test_InternalOrder.OPEN_REGISTER:
@@ -43,6 +43,8 @@ let _mainPanel;
 let _registerPanel;
 let tryOpenMainPanel = (data={}) =>
 {		
+
+	console.log("+++++++++++++++++++++");
 	if(!_mainPanel)
 	{
 		// RequireFactory.add(["test/views/Test_Panel"],function(mainpanel){

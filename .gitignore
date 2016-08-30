@@ -12,7 +12,3 @@ bower_components/
 build/
 scss/
 css/
-bower.json
-Gruntfile.js
-package.json
-webpack.config.js

@@ -935,7 +935,7 @@
 		}, {
 			key: "getParamer",
 			value: function getParamer(key) {
-				return GlobalStaticConfig.serviceParam && GlobalStaticConfig.serviceParam[key] && "";
+				return GlobalStaticConfig.serviceParam ? GlobalStaticConfig.serviceParam[key] : "";
 			}
 
 			/**

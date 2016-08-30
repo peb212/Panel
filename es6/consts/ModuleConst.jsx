@@ -7,6 +7,6 @@
 import Test_Module from "./../modules/test/Test_Module";
 let ModuleConst = {};
 /**测试模块*/
-ModuleConst.TEST_MODULE = Test_Module;//"test/Test_Module";
+ModuleConst.TEST_MODULE = Test_Module;//"/modules/test/Test_Module";//
 
 export default ModuleConst;

@@ -76,6 +76,7 @@ class PanelManagerFactory
 	openPanel(key="",closeother=false)
 	{
 		var panel = this._panelDic[key];
+		console.log(panel,"=====================ddddddddddddddddddd==============")
 		if(!panel)
 			return;
 		var full = panel.type=="full";
