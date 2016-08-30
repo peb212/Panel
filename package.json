@@ -33,6 +33,14 @@
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peb212/Panel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/peb212/Panel/issues"
+  },
+  "homepage": "https://github.com/peb212/Panel",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "babel": "babel com --out-dir build",
