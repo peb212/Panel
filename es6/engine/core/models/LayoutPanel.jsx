@@ -240,9 +240,9 @@ export default class LayoutPanel extends Panel
 				this.titleshape = document.createElement("h4");
 				this.titleshape.className = "panel_title";
 				this._setstyle(this.titleshape,this._title_style);
-				this.titleshape.addEventListener("mousedown",this._titlemouseevent,false);
-				this.titleshape.addEventListener("mouseup",this._titlemouseevent,false);
-				this.titleshape.addEventListener("mousemove",this._titlemouseevent,false);
+				this.titleshape.addEventListener("mousedown",$.proxy(this._titlemouseevent,this),false);
+				this.titleshape.addEventListener("mouseup",$.proxy(this._titlemouseevent,this),false);
+				this.titleshape.addEventListener("mousemove",$.proxy(this._titlemouseevent,this),false);
 			}
 			if(!this.titleshape.parentNode)
 			{
@@ -363,7 +363,7 @@ export default class LayoutPanel extends Panel
 				stageResize.remove(this.resize);
 				console.log(this,"=====================")
 				this.closePanel();
-				Loop.removeByLayoutId(this.id);
+				this.Loop.removeByLayoutId(this.id);
 				this._closing = false;
 			},this));
 		}
@@ -430,9 +430,9 @@ export default class LayoutPanel extends Panel
 		{
 			this.maskshape = document.createElement("div");
 			this.maskshape.className = "panel_mark";
-			this.maskshape.addEventListener("click",this._markshapeListenter,false);
-			this.maskshape.addEventListener("mousedown",this._markshapeListenter,false);
-			this.maskshape.addEventListener("dblclick",this._markshapeListenter,false);
+			this.maskshape.addEventListener("click",$.proxy(this._markshapeListenter,this),false);
+			this.maskshape.addEventListener("mousedown",$.proxy(this._markshapeListenter,this),false);
+			this.maskshape.addEventListener("dblclick",$.proxy(this._markshapeListenter,this),false);
 		}
 	}
 	
@@ -445,6 +445,7 @@ export default class LayoutPanel extends Panel
 	 */
 	panelButtonClickHandler(evt)
 	{
+		console.log("=========");
 		this.close();
 	}
 	
@@ -458,6 +459,8 @@ export default class LayoutPanel extends Panel
 	_markshapeListenter(evt)
 	{
 		evt.stopPropagation();
+		console.log("========_markshapeListenter=====",this._autoClose,this);
+
 		if(this._autoClose)
 			this.close();
 		return false;

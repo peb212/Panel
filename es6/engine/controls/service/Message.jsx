@@ -4,7 +4,8 @@
  * @date    2016-08-13 16:54:47
  * @version 0.0.1
  */
-import URLUtils from './../../utils/Utils';
+import URLUtils    from './../../utils/Utils';
+import ModuleConst from "./../../../consts/ModuleConst";
 // import Test_Module from "./../../../modules/test/Test_Module";
 // import RequireFactory from './../../utils/RequireFactory';
 const MOTHOD = {
@@ -317,6 +318,8 @@ class loadModule
 				var path = require("path")
 				console.log(modKeys[i]);
 				var mod = modKeys[i];//require(path.relative('/engine/service/Message',modKeys[i]));
+				if(typeof(mod)=="string")
+					mod = ModuleConst[mod];
 				// console.log(mod,mod.subHander,mod.hasOwnProperty("subHander"),mod.hasOwnProperty("checkCode"),$.type(mod.subHander)=="function");
 				if(mod)
 				{

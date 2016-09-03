@@ -16,6 +16,7 @@ export default class Panel
 	constructor(props) {
 		this._data = null;
 		this._datachanged = false;
+		this._uiInit = false;
 		this._container=null;
 		this._width		= 600;
 		this._height     = 400;
@@ -128,8 +129,19 @@ export default class Panel
 	 * @return
 	 */
 	initialize(){
-		this.createChildren();
-		this.draw();
+		var initderfer = this.createChildren();
+		if(initderfer)
+		{
+			initderfer.done($.proxy(function(){
+				this.draw();
+				this.datachange();
+			},this));
+		}
+		else
+		{
+			this.draw();
+		}
+		
 	}
 
 	/**
@@ -140,6 +152,8 @@ export default class Panel
 	 */
 	datachange()
 	{
+		if(!this._datachanged||!this._uiInit)
+			return false;
 		this._datachanged = false;
 	}
 	
@@ -197,7 +211,7 @@ export default class Panel
 	 */
 	 showPanel()
 	 {
-	 	this.show();
+	 	// this.show();
 	 }
 		
 	/**
@@ -308,6 +322,11 @@ export default class Panel
 	loopRemove(fun)
 	{
 		Loop.remove(fun);
+	}
+
+	get Loop()
+	{
+		return Loop;
 	}
 	
 	/**
